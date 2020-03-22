@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ReverseStringPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value: string): string {
+    let revStr:string="";
+    for(var i = value.length-1;i>=0;i--)
+    {
+      revStr+= value.charAt(i);
+    }
+    return revStr;
   }
 
 }
